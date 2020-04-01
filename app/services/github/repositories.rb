@@ -2,6 +2,8 @@ module Github
   class Repositories < Base
     include Enumerable
 
+    attr_accessor :repositories
+
     def initialize(args = {})
       @repositories = parse_repositories(args)
     end
