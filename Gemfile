@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Use HTTP client library to call REST APIs
 gem 'faraday'
 
+# Use jQuery for frontend
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
