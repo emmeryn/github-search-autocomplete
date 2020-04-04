@@ -1,6 +1,8 @@
 function onReady() {
     let truncate = function(string, length) {
-        if (string.length <= length) {
+        if (string == null) {
+            return '';
+        } else if (string.length <= length) {
             return string;
         } else {
             return string.slice(0, length) + '...';
@@ -27,7 +29,7 @@ function onReady() {
         remote: {
             url: '/github/search_repositories/%QUERY',
             wildcard: '%QUERY',
-            cache: true,
+            cache: false,
             transform: data_transform
         }
     });
